@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: #28C247;
+    --secondary: #FFDD28;
+    --white: #fff;
+    --black: #000;
+
+    /* Font family */
+    --inter: 'Inter', Arial, sans-serif;
+
+    /* Font size */
+    --sm: 17px;
+    --md: 20px;
+    --lg: 26px;
+    --xl: 31px;
+}
