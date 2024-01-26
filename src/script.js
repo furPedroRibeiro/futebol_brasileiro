@@ -10,3 +10,48 @@ function closeMenu(){
     menu.style.zIndex = "-1"
     menu.style.left = "100vw"
 }
+
+// SLIDER CONFIG
+
+const containerSlider = document.querySelector(".slider-wrapper")
+const prevButton = document.getElementById("prev-button")
+const nextButton = document.getElementById("next-button")
+
+let currentSlider = 0
+
+containerSlider.children[currentSlider].style.opacity = '1'
+
+
+function prevSlider(){
+    if(currentSlider > 0){
+        for(let i = 0;i < containerSlider.children.length; i++){
+            if(i == currentSlider){
+                currentSlider--
+                containerSlider.children
+                [currentSlider].style.opacity = '1'
+            }
+            containerSlider.children[i].style.opacity = '0'
+        }
+    } else if(currentSlider == 0){
+        containerSlider.children[0].style.opacity = '0'
+        currentSlider = (containerSlider.children.length-1)
+        containerSlider.children[currentSlider].style.opacity = '1'
+    }
+}
+function nextSlider(){
+    if(currentSlider < (containerSlider.children.length-1)){
+        containerSlider.children[currentSlider].style.opacity = '0'
+        currentSlider++
+        containerSlider.children[currentSlider].style.opacity = '1'
+    } else if(currentSlider == (containerSlider.children.length-1)){
+        containerSlider.children[currentSlider].style.opacity = '0'
+        currentSlider = 0
+        console.log(currentSlider)
+        containerSlider.children[currentSlider].style.opacity = '1'
+    }
+}
+
+setInterval(nextSlider, 10000)
+
+
+
