@@ -53,5 +53,30 @@ function nextSlider(){
 
 setInterval(nextSlider, 10000)
 
+window.onload = function(){
+    heightSliderContainer()
+}
+window.onresize = function(){
+    heightSliderContainer()
+}
+function heightSliderContainer(){
+    let img = document.getElementById('imageId'); 
+    //or however you get a handle to the IMG
+    let width = img.clientWidth;
+    let height = img.clientHeight;
+
+    console.log(width)
+    console.log(height)
+
+    const divSlider = document.querySelector(".slider-container")
+    const divSliderWrapper = document.querySelector(".slider-wrapper")
+
+    divSlider.style.height = height + 'px';
+    divSliderWrapper.style.height = height + 'px';
+
+    console.log(divSlider.style.height)
+    console.log(divSliderWrapper.style.height)
+}
+
 
 

@@ -17,6 +17,8 @@ header{
     justify-content: space-around;
     flex-wrap: wrap;
 
+    background-color: var(--white);
+
     padding-block: 1.5rem;
     /* 1rem = 16px */
 }
@@ -36,11 +38,12 @@ a.item-header{
     color: var(--black);
 
     font-size: var(--md);
+    font-weight: 400;
 }
 a.item-header::after{
     content: '';
 
-    height: 1.8px;
+    height: 1.5px;
     width: 0px;
 
     background-color: var(--black);
@@ -117,9 +120,19 @@ button{
         --md: 24px;
     }  
 }
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: var(--xl);
+    font-weight: 800;
+    padding-block: 1.5rem;
+}
 .slider-container{
     width: 100%;
-    height: 550px;
 
     display: flex;
     flex-direction: column;
@@ -128,16 +141,11 @@ button{
 }
 .slider-wrapper{
     width: 100%;
-    height: 550px;
-
-    display: flex;
-    flex-wrap: wrap;
 }
 .slider{
     position: absolute;
 
     width: 100%;
-    height: 100%;
 
     opacity: 0;
 
@@ -145,10 +153,11 @@ button{
 }
 .slider img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .buttonSlider{
     position: absolute;
-
     padding-inline: 1rem;
 }
 #prev-button{
