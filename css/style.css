@@ -166,3 +166,74 @@ h1{
 #next-button{
     right: 0;
 }
+
+.cards-main{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+    padding-block: 1rem;
+    padding-inline: 10px;
+}
+.card-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    text-decoration: none;
+
+    width: 300px;
+    height: 400px;
+}
+.social-icons a{
+    color: var(--white);
+    text-decoration: none;
+}
+.footer-card{
+    width: 100%;
+    height: 16%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.4rem;
+
+    background: linear-gradient(0deg,#000, transparent);
+
+    transition: height 0.7s;
+}
+.card-main:hover .footer-card{
+    height: 100%;
+}
+.title-card{
+    padding: 0.5rem;
+
+    color: var(--white);
+    text-shadow: 2px 2px 3px var(--black);
+    font-size: var(--md-lg);
+    font-weight: 600;
+
+    text-align: center;
+}
+.social-icons{
+    display: none;
+    gap: 0.3rem;
+}
+.card-main:hover .social-icons{
+    display: flex;
+
+}
+.card-main span{
+    text-shadow: 2px 2px 3px var(--black);
+}
